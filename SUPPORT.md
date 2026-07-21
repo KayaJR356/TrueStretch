@@ -30,4 +30,4 @@ TrueStretch ile ilgili yardım için önce [README](README.md) içindeki gereksi
 
 TrueStretch yalnızca Windows ve ekran sürücüsünün sunduğu modlarla çalışır. Özel EDID, firmware değişikliği, donanım arızası veya üçüncü taraf GPU kontrol paneli yapılandırmaları için destek garanti edilmez.
 
-Yanıt süresi ve resmî doğrudan destek kanalı: **TODO**.
+Garanti edilen bir yanıt süresi veya bire bir destek kanalı yoktur. Eksiksiz ve tekrar üretilebilir raporlar öncelikli değerlendirilir.
