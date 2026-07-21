@@ -1,87 +1,200 @@
-# TrueStretch 3.0
+<div align="center">
 
-TrueStretch, Windows'ta desteklenen ekran modlarını güvenli biçimde uygulayan, özel çözünürlük profilleri saklayan ve rekabetçi oyunlar için web kaynaklı çözünürlük önerileri çıkaran açık kaynaklı bir WinForms aracıdır.
+# TrueStretch
+
+**Windows için güvenli ekran modu, özel çözünürlük profili ve rekabetçi oyun çözünürlüğü öneri aracı.**
+
+<!-- TODO: Add a 1280×640 project banner at docs/assets/banner.png -->
+> [!NOTE]
+> **Banner:** TODO — Projenin gerçek arayüzünü gösteren banner eklenecek.
+
+[![Windows Build](https://github.com/KayaJR356/TrueStretch/actions/workflows/build.yml/badge.svg)](https://github.com/KayaJR356/TrueStretch/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/KayaJR356/TrueStretch?display_name=tag&sort=semver)](https://github.com/KayaJR356/TrueStretch/releases)
+[![License](https://img.shields.io/github/license/KayaJR356/TrueStretch)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/KayaJR356/TrueStretch?style=flat)](https://github.com/KayaJR356/TrueStretch/stargazers)
+[![Forks](https://img.shields.io/github/forks/KayaJR356/TrueStretch?style=flat)](https://github.com/KayaJR356/TrueStretch/forks)
+[![Issues](https://img.shields.io/github/issues/KayaJR356/TrueStretch)](https://github.com/KayaJR356/TrueStretch/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/KayaJR356/TrueStretch)](https://github.com/KayaJR356/TrueStretch/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/KayaJR356/TrueStretch)](TrueStretch.cs)
+
+[Özellikler](#-özellikler) · [Kurulum](#-kurulum) · [Kullanım](#-kullanım) · [Katkı](#-katkı-sağlama) · [Güvenlik](SECURITY.md)
+
+</div>
 
 > [!WARNING]
-> Ekran modu değişiklikleri geçici görüntü kaybına yol açabilir. TrueStretch yeni modu uygulamadan önce sürücüyle test eder ve kullanıcı 15 saniye içinde onaylamazsa önceki moda döner. Uygulama imzasızdır; yalnızca bu depodan kendiniz derlediğiniz veya Releases bölümünden hash'i doğrulanmış çıktıyı kullanın.
+> Ekran modu değişiklikleri geçici görüntü kaybına yol açabilir. TrueStretch modu önce sürücüyle test eder ve kullanıcı 15 saniye içinde onaylamazsa önceki moda döner. Uygulama imzasızdır; yalnızca bu depodan derlediğiniz veya doğrulanmış bir Release çıktısını kullanın.
 
-## Özellikler
+## İçindekiler
 
-- Windows sürücüsünün bildirdiği çözünürlük ve yenileme hızlarını listeler.
-- Seçilen modu uygulamadan önce `CDS_TEST` ile doğrular.
-- 15 saniyelik güvenli onay ve otomatik geri alma sunar.
-- İsteğe bağlı olarak TrueStretch profili aktifken monitör aygıtını devre dışı tutar; normal moda dönüşte yeniden etkinleştirir.
-- Düşük çözünürlükleri `DMDFO_STRETCH` ile tam ekrana yayarak sürücü desteklediğinde sağ ve sol siyah çubukları kaldırır.
-- Genişlik, yükseklik ve yenileme hızından özel profiller oluşturur.
-- Profilleri `%LocalAppData%\TrueStretch\profiles.xml` altında kullanıcı bazında saklar.
-- Valorant, Counter-Strike 2, Fortnite, Apex Legends, PUBG, Rainbow Six Siege, Overwatch 2 ve The Finals için web önerileri arar.
-- Web sonuçlarında geçen çözünürlükleri sıklıklarına göre sıralar ve kaynak bağlantısını korur.
-- İnternet erişimi yoksa başlangıç önerilerine geri döner.
-- Tek dosyalık, kurulum gerektirmeyen 64-bit Windows uygulaması üretir.
+- [Neden TrueStretch?](#neden-truestretch)
+- [Özellikler](#-özellikler)
+- [Ekran görüntüleri](#-ekran-görüntüleri)
+- [Demo](#-demo)
+- [Kurulum](#-kurulum)
+- [Kullanım](#-kullanım)
+- [Proje yapısı](#-proje-yapısı)
+- [Teknoloji yığını](#-teknoloji-yığını)
+- [Yol haritası](#-yol-haritası)
+- [Katkı sağlama](#-katkı-sağlama)
+- [Lisans](#-lisans)
+- [İletişim](#-iletişim)
+- [Teşekkürler](#-teşekkürler)
 
-## Ekranlar
+## Neden TrueStretch?
 
-### Ekran Modları
+TrueStretch, Windows sürücüsünün bildirdiği ekran modlarını tek bir arayüzde yönetir. Yeni modu uygulamadan önce uyumluluğu sınar, geri sayımlı onay sunar ve özel profilleri yerel olarak saklar. Rekabetçi oyunlar için web kaynaklı çözünürlükleri keşfetmeye yardımcı olur; donanım zamanlamasını veya EDID verisini zorla değiştirmez.
 
-Sürücünün desteklediği modları listeler. Seçilen mod test edilir, uygulanır ve geri sayımlı pencerede onay bekler.
+## ✨ Özellikler
 
-### Özel Profiller
+| Alan | Yetenek |
+| --- | --- |
+| Güvenli mod değişimi | Modu `CDS_TEST` ile doğrular, 15 saniyede onaylanmazsa geri alır |
+| Ekran modu keşfi | Windows sürücüsünün bildirdiği çözünürlük ve yenileme hızlarını listeler |
+| Stretch ölçekleme | Sürücü desteklediğinde `DMDFO_STRETCH` ile tam ekran ölçekleme ister |
+| Özel profiller | Genişlik, yükseklik ve yenileme hızı profillerini kullanıcı bazında saklar |
+| Oyun önerileri | Sekiz rekabetçi oyun için web kaynaklı çözünürlükleri sıralar |
+| Çevrimdışı kullanım | Web erişimi olmadığında yerel başlangıç önerilerine döner |
+| Gizlilik | Telemetri veya kullanıcı hesabı kullanmaz |
+| Taşınabilir çıktı | Kurulum gerektirmeyen tek dosyalık Windows x64 uygulaması üretir |
 
-Çözünürlük ve yenileme hızı kombinasyonlarını kaydeder. Profil, sürücü tarafından desteklenmiyorsa TrueStretch güvenli biçimde reddeder.
+## 📸 Ekran görüntüleri
 
-### Oyun Önerileri
+> [!NOTE]
+> TODO: Doğrulanmış uygulama ekran görüntülerini `docs/assets/` altında ekleyin ve bu tabloyu güncelleyin.
 
-Seçilen oyun için Bing RSS aramasını kullanır. Sonuç başlığı ve açıklamalarındaki `genişlik × yükseklik` değerlerini çıkarır, tekrar sayısına göre sıralar ve orijinal kaynağı açmanıza olanak verir. Bu öneriler topluluk verisidir; donanım uyumluluğu garantisi değildir.
+| Ekran Modları | Özel Profiller | Oyun Önerileri |
+| --- | --- | --- |
+| TODO | TODO | TODO |
 
-## Sistem gereksinimleri
+## 🎬 Demo
 
-- Windows 10 veya Windows 11, 64-bit
+- **İndirilebilir sürüm:** [GitHub Releases](https://github.com/KayaJR356/TrueStretch/releases)
+- **Video / GIF:** TODO
+- Masaüstü uygulaması olduğu için web demosu bulunmaz.
+
+## 🚀 Kurulum
+
+### Gereksinimler
+
+- Windows 10 veya Windows 11 (64-bit)
 - .NET Framework 4.x
-- Mod uygulamak için yönetici yetkisi
-- Web önerileri için internet bağlantısı
+- Ekran modu uygulamak için yönetici yetkisi
+- Oyun önerileri için isteğe bağlı internet bağlantısı
 
-## Derleme
-
-Depoyu klonlayın ve PowerShell'de:
+### Kaynaktan derleme
 
 ```powershell
+git clone https://github.com/KayaJR356/TrueStretch.git
+cd TrueStretch
 .\build.ps1
 ```
 
-Derleme, Windows ile gelen 64-bit .NET Framework C# derleyicisini kullanır. Çıktı üst dizindeki `outputs\TrueStretch.exe` konumuna yazılır.
+Derleme betiği Windows ile gelen 64-bit .NET Framework C# derleyicisini kullanır. Çıktı, betiğin tanımladığı `outputs\TrueStretch.exe` konumuna yazılır.
 
-GitHub Actions, her push ve pull request için Windows üzerinde aynı derlemeyi otomatik doğrular ve EXE'yi artifact olarak sunar.
+> [!TIP]
+> Bir Release mevcutsa, indirdiğiniz çalıştırılabilir dosyanın yayımlanan SHA-256 değerini doğrulayın.
 
-## Teknik yaklaşım
+## 🧭 Kullanım
 
-- Arayüz: Windows Forms
-- Ekran modu keşfi: `EnumDisplaySettings`
-- Güvenli ön kontrol: `ChangeDisplaySettingsEx(..., CDS_TEST, ...)`
-- Uygulama: `ChangeDisplaySettingsEx(..., CDS_UPDATEREGISTRY, ...)`
-- Profil biçimi: Basit XML
-- Web araması: HTTPS üzerinden Bing RSS
-- Bağımlılıklar: Yalnızca .NET Framework sistem kütüphaneleri
+1. TrueStretch'i yönetici olarak çalıştırın.
+2. **Ekran Modları** bölümünde sürücünün sunduğu modu seçin.
+3. Modu uygulayın ve görüntü doğruysa 15 saniye içinde onaylayın.
+4. Tekrar kullanacağınız değerleri **Özel Profiller** bölümünde kaydedin.
+5. Topluluk eğilimlerini görmek için **Oyun Önerileri** bölümünden oyun seçin.
+6. Başlangıç ayarına dönmek için **Başlangıç moduna dön** seçeneğini kullanın.
 
-Daha ayrıntılı akış için [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) dosyasına bakın.
+> [!CAUTION]
+> Web önerileri teknik uyumluluk garantisi değildir. Desteklenen gerçek modları ekranınız ve GPU sürücünüz belirler. Ekran ayarı değiştirmeden önce açık çalışmalarınızı kaydedin.
 
-## Bilinen sınırlamalar
+Profiller şurada tutulur:
 
-- TrueStretch, ekran kartı sürücüsüne yeni EDID veya özel zamanlama kaydı zorla yazmaz.
-- Onay süresi dolarsa veya uygulama kapanırsa monitör aygıtı güvenlik amacıyla yeniden etkinleştirilir.
-- Bir profil kaydedilebilir olsa da sürücü tarafından desteklenmiyorsa uygulanamaz.
-- NVIDIA, AMD ve Intel kontrol panellerinde daha önce oluşturulan özel modlar Windows tarafından görünüyorsa listelenebilir.
-- Çoklu monitör desteği şu anda birincil ekranla sınırlıdır.
-- Web sonucu sıklığı, önerinin teknik olarak en iyi seçenek olduğunu tek başına kanıtlamaz.
-- Bazı oyunların en-boy oranı ve tam ekran davranışı oyun motoruna göre değişir.
+```text
+%LocalAppData%\TrueStretch\profiles.xml
+```
 
-## Güvenlik ve gizlilik
+## 🗂️ Proje yapısı
 
-Uygulama telemetri toplamaz ve kullanıcı hesabı istemez. Web önerisi çalıştırıldığında seçilen oyun adı Bing aramasına gönderilir. Profil verileri yalnızca yerel kullanıcı klasöründe tutulur. Güvenlik bildirimi için [`SECURITY.md`](SECURITY.md) dosyasını kullanın.
+```text
+TrueStretch/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/build.yml
+├── assets/
+│   └── TrueStretch.ico
+├── docs/
+│   └── ARCHITECTURE.md
+├── TrueStretch.cs
+├── app.manifest
+├── build.ps1
+├── README.md
+├── LICENSE
+└── CHANGELOG.md
+```
 
-## Katkı
+> [!NOTE]
+> Bu özet yalnızca README ve derleme yapılandırmasında doğrulanan ana dosyaları gösterir.
 
-Hata raporları ve geliştirmeler memnuniyetle karşılanır. Değişiklik göndermeden önce [`CONTRIBUTING.md`](CONTRIBUTING.md) dosyasını okuyun.
+## 🧰 Teknoloji yığını
 
-## Lisans
+| Katman | Teknoloji |
+| --- | --- |
+| Dil | C# |
+| Arayüz | Windows Forms |
+| Platform | .NET Framework 4.x / Windows x64 |
+| Ekran API'leri | Win32: `EnumDisplaySettings`, `ChangeDisplaySettingsEx` |
+| Aygıt yönetimi | Configuration Manager API (`cfgmgr32.dll`) |
+| Veri | Yerel XML |
+| Web araması | HTTPS üzerinden Bing RSS |
+| CI | GitHub Actions |
+| Harici paket | Yok |
 
-MIT — ayrıntılar için [`LICENSE`](LICENSE).
+Mimari ayrıntıları için [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) dosyasına bakın.
+
+## 🗺️ Yol haritası
+
+- [x] Güvenli ekran modu listeleme ve uygulama
+- [x] 15 saniyelik otomatik geri alma
+- [x] Yerel özel çözünürlük profilleri
+- [x] Oyun çözünürlüğü önerileri
+- [ ] Birden fazla monitör seçimi
+- [ ] Kod imzalı sürümler
+- [ ] Yerelleştirme kaynakları
+- [ ] Öneri kaynakları için alan adı filtreleme ve güven puanı
+- [ ] İsteğe bağlı üretici API modülleri
+
+Öneriler için [feature request](https://github.com/KayaJR356/TrueStretch/issues/new?template=feature_request.md) açabilirsiniz.
+
+## 🤝 Katkı sağlama
+
+Katkılar memnuniyetle karşılanır:
+
+1. Önce mevcut issue'ları kontrol edin.
+2. Anlamlı değişiklikler için bir issue açın.
+3. Depoyu fork edin ve odaklı bir dal oluşturun.
+4. `.\build.ps1` ile temiz derlemeyi doğrulayın.
+5. Açıklayıcı bir pull request gönderin.
+
+Ayrıntılar için [CONTRIBUTING.md](CONTRIBUTING.md), davranış standartları için [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) dosyasını okuyun.
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında sunulur.
+
+## 📬 İletişim
+
+- Hata bildirimi: [GitHub Issues](https://github.com/KayaJR356/TrueStretch/issues)
+- Güvenlik açığı: [SECURITY.md](SECURITY.md)
+- Genel destek: [SUPPORT.md](SUPPORT.md)
+- Doğrudan iletişim: TODO
+
+## 🙏 Teşekkürler
+
+- Katkıda bulunan ve geri bildirim paylaşan topluluk üyelerine
+- .NET ve Windows geliştirici ekosistemine
+- Açık kaynak araçlarını sürdüren herkese
+
+---
+
+<div align="center">
+TrueStretch'i yararlı bulduysanız projeye ⭐ vermeyi düşünebilirsiniz.
+</div>
