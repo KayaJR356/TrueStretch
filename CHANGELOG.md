@@ -1,22 +1,40 @@
 # Değişiklik Geçmişi
 
-## 3.0.0 - 2026-07-20
+Bu projedeki önemli değişiklikler bu dosyada belgelenir. Biçim [Keep a Changelog](https://keepachangelog.com/tr/1.1.0/) yaklaşımını izler ve sürümler [Semantic Versioning](https://semver.org/) ile numaralandırılır.
 
-- Arayüz; sol navigasyon, modern koyu tema, durum kartları ve tutarlı işlem düğmeleriyle yeniden tasarlandı.
-- Menü/içerik eşleşmesi, beyaz sekme çerçevesi ve kesilen sayı alanları düzeltildi.
-- Sıkışık parçalı sayı denetimi, zorunlu 38 piksel yüksekliğinde tek parça özel giriş alanıyla değiştirildi.
-- Çözünürlük desteği ve stretch ölçekleme kontrolleri ayrılarak yanlış `BADMODE` / GPU desteklemiyor sonucu düzeltildi.
-- İstenen yenileme hızı yoksa aynı çözünürlükte en yakın sürücü modu otomatik seçiliyor.
-- Mod değişiminden sonra monitörü devre dışı bırakıp yeniden etkinleştiren ölçekleme sıfırlaması geri eklendi.
-- TrueStretch oturumunda monitör aygıtını devre dışı tutma ve normal moda dönüşte etkinleştirme davranışı geri getirildi.
-- `DMDFO_STRETCH` tam ekran ölçekleme alanı eklenerek sürücü kaynaklı yan siyah çubukların kaldırılması hedeflendi.
-- TrueStretch uygulama ve EXE simgesi eklendi.
-- Ekran modları, özel profiller ve oyun önerileri ayrı çalışma alanlarına dönüştürüldü.
+## [Unreleased]
+
+### Documentation
+
+- README, katkı, güvenlik, destek ve topluluk belgeleri profesyonel açık kaynak standartlarına göre düzenlendi.
+- Issue ve pull request şablonları eklendi.
+
+## [3.0.0] - 2026-07-20
+
+### Added
+
+- Sol navigasyonlu modern koyu arayüz ve tutarlı işlem alanları
+- Güvenli ekran modu listeleme ve uygulama
+- 15 saniyelik otomatik geri alma
+- Yerel özel çözünürlük profilleri
+- Sekiz oyun için web kaynaklı öneri araması
+- Çevrimdışı başlangıç önerileri
+- Kaynak bağlantısı ve en-boy oranı gösterimi
+- Yönetici manifesti, uygulama simgesi ve otomatik Windows derlemesi
+- `DMDFO_STRETCH` tam ekran ölçekleme isteği
+- TrueStretch oturumunda monitör aygıtını devre dışı tutma seçeneği
+
+### Changed
+
+- Ekran Modları, Özel Profiller ve Oyun Önerileri ayrı çalışma alanlarına taşındı.
+- İstenen yenileme hızı yoksa aynı çözünürlükte en yakın sürücü modu seçiliyor.
 - Güvenli geri alma bilgisi ana arayüzde sürekli görünür hale getirildi.
-- Güvenli ekran modu listeleme ve uygulama eklendi.
-- 15 saniyelik otomatik geri alma eklendi.
-- Yerel özel çözünürlük profilleri eklendi.
-- Sekiz oyun için web kaynaklı öneri araması eklendi.
-- Çevrimdışı başlangıç önerileri eklendi.
-- Kaynak bağlantısı ve en-boy oranı gösterimi eklendi.
-- Yönetici manifesti ve otomatik Windows derlemesi eklendi.
+
+### Fixed
+
+- Menü/içerik eşleşmesi, beyaz sekme çerçevesi ve kesilen sayı alanları
+- Çözünürlük desteği ile stretch ölçekleme kontrolünün karışmasından kaynaklanan yanlış `BADMODE` sonucu
+- Mod değişiminden sonra monitör ölçekleme sıfırlaması ve normal moda dönüş davranışı
+
+[Unreleased]: https://github.com/KayaJR356/TrueStretch/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/KayaJR356/TrueStretch/releases/tag/v3.0.0
