@@ -59,7 +59,7 @@ Bakımcılar kapsamın küçültülmesini, ek test veya dokümantasyon isteyebil
 
 ## Dokümantasyon
 
-Kullanıcı davranışını değiştiren katkılar README, CHANGELOG veya mimari belgesini de güncellemelidir. Doğrulanmamış bilgi eklemeyin; gerekirse `TODO` kullanın.
+Kullanıcı davranışını değiştiren katkılar README, CHANGELOG veya mimari belgesini de güncellemelidir. Doğrulanmamış bilgi veya geçici yer tutucu yayımlamayın; içeriği merge öncesinde doğrulayın.
 
 ## Lisans
 
