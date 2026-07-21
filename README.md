@@ -1,12 +1,11 @@
 <div align="center">
 
+<img src="docs/assets/banner.svg" alt="TrueStretch — Windows için güvenli ekran modu ve çözünürlük profili aracı" width="100%">
+
 # TrueStretch
 
 **Windows için güvenli ekran modu, özel çözünürlük profili ve rekabetçi oyun çözünürlüğü öneri aracı.**
 
-<!-- TODO: Add a 1280×640 project banner at docs/assets/banner.png -->
-> [!NOTE]
-> **Banner:** TODO — Projenin gerçek arayüzünü gösteren banner eklenecek.
 
 [![Windows Build](https://github.com/KayaJR356/TrueStretch/actions/workflows/build.yml/badge.svg)](https://github.com/KayaJR356/TrueStretch/actions/workflows/build.yml)
 [![Release](https://img.shields.io/github/v/release/KayaJR356/TrueStretch?display_name=tag&sort=semver)](https://github.com/KayaJR356/TrueStretch/releases)
@@ -28,7 +27,6 @@
 
 - [Neden TrueStretch?](#neden-truestretch)
 - [Özellikler](#-özellikler)
-- [Ekran görüntüleri](#-ekran-görüntüleri)
 - [Demo](#-demo)
 - [Kurulum](#-kurulum)
 - [Kullanım](#-kullanım)
@@ -57,19 +55,9 @@ TrueStretch, Windows sürücüsünün bildirdiği ekran modlarını tek bir aray
 | Gizlilik | Telemetri veya kullanıcı hesabı kullanmaz |
 | Taşınabilir çıktı | Kurulum gerektirmeyen tek dosyalık Windows x64 uygulaması üretir |
 
-## 📸 Ekran görüntüleri
-
-> [!NOTE]
-> TODO: Doğrulanmış uygulama ekran görüntülerini `docs/assets/` altında ekleyin ve bu tabloyu güncelleyin.
-
-| Ekran Modları | Özel Profiller | Oyun Önerileri |
-| --- | --- | --- |
-| TODO | TODO | TODO |
-
 ## 🎬 Demo
 
 - **İndirilebilir sürüm:** [GitHub Releases](https://github.com/KayaJR356/TrueStretch/releases)
-- **Video / GIF:** TODO
 - Masaüstü uygulaması olduğu için web demosu bulunmaz.
 
 ## 🚀 Kurulum
@@ -185,7 +173,6 @@ Bu proje [MIT Lisansı](LICENSE) altında sunulur.
 - Hata bildirimi: [GitHub Issues](https://github.com/KayaJR356/TrueStretch/issues)
 - Güvenlik açığı: [SECURITY.md](SECURITY.md)
 - Genel destek: [SUPPORT.md](SUPPORT.md)
-- Doğrudan iletişim: TODO
 
 ## 🙏 Teşekkürler
 
