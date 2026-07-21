@@ -32,9 +32,7 @@ Bu kurallar proje alanlarında ve bir kişinin projeyi resmî olarak temsil etti
 
 ## Bildirim
 
-Davranış ihlallerini doğrudan iletişim kanalı üzerinden bildirme yöntemi: **TODO**.
-
-Bu kanal belirlenene kadar, hassas ayrıntıları herkese açık paylaşmadan repository sahibinin GitHub profili üzerinden özel iletişim yöntemi isteyin. Tüm bildirimler gizlilik ve güvenlik gözetilerek incelenecektir.
+Davranış ihlallerini, hassas ayrıntıları herkese açık paylaşmadan [repository sahibinin GitHub profilinde](https://github.com/KayaJR356) sunduğu iletişim yöntemlerinden biriyle bildirin. Tüm bildirimler gizlilik ve güvenlik gözetilerek incelenecektir.
 
 ## Uygulama rehberi
 
