@@ -17,7 +17,7 @@ Bir açığı herkese açık issue, discussion veya pull request içinde paylaş
 2. Özel bildirim etkin değilse, teknik ayrıntı vermeden özel iletişim kanalı isteyen bir issue açın.
 3. Etkilenen sürümü, yeniden üretim adımlarını, olası etkiyi ve varsa güvenli çözüm önerisini ekleyin.
 
-Alındı onayı ve müdahale süresi: **TODO**.
+Bu topluluk projesinde garanti edilen bir yanıt veya çözüm süresi yoktur. Doğrulanmış ve yüksek etkili bildirimler öncelikli ele alınır.
 
 > [!IMPORTANT]
 > Bakımcı güvenli bir düzeltme yayımlamadan önce açığı kamuya açıklamayın.
